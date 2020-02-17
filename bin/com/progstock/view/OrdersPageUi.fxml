@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="595.0" prefWidth="1020.0" stylesheets="@../../../../Resources/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <DatePicker fx:id="date_Dp" minWidth="156.0" onAction="#initCustomListTableView" prefWidth="156.0" promptText="Date...">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="reference_Cb" editable="true" minWidth="156.0" onAction="#initCustomListTableView" onShowing="#initComboBoxReference" prefWidth="156.0" promptText="Référence..." />
+                  <ComboBox fx:id="fournisseur_Cb" editable="true" minWidth="156.0" onAction="#initCustomListTableView" onShowing="#initComboBoxFournisseur" prefWidth="156.0" promptText="Fournisseur..." />
+                  <ComboBox fx:id="familyProduct_Cb" editable="true" minWidth="156.0" onAction="#initCustomListTableView" onShowing="#initComboBoxFamilyProduct" prefWidth="156.0" promptText="Type..." />
+                  <ComboBox fx:id="product_Cb" editable="true" minWidth="156.0" onAction="#initCustomListTableView" onShowing="#initComboBoxProduct" prefWidth="156.0" promptText="Article..." />
+                  <JFXButton minWidth="159.0" onAction="#resetCombo" prefWidth="159.0" styleClass="generalButton" text="Reset" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="commande_Tv">
+              <columns>
+                <TableColumn fx:id="dateColumn" prefWidth="166.0" text="Date">
+                	<cellValueFactory>
+                 			<PropertyValueFactory property="date" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                  <TableColumn fx:id="referenceColumn" prefWidth="166.0" text="Référence commande">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="reference" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                  <TableColumn fx:id="fournisseurColumn" prefWidth="166.0" text="Fournisseur">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="fournisseur" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                <TableColumn fx:id="typeColumn" prefWidth="166.0" text="Type">
+                	<cellValueFactory>
+                 			<PropertyValueFactory property="type" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                  <TableColumn fx:id="articleColumn" prefWidth="166.0" text="Article">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="article" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                  <TableColumn fx:id="quantiteColumn" minWidth="0.0" prefWidth="168.0" text="Quantité">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="quantite" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+              </columns>
+            </TableView>
+            <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <HBox prefHeight="28.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Référence de la commande :">
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="refCommande_Tf" />
+                           </children>
+                        </HBox>
+                        <ButtonBar prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <buttons>
+                              <JFXButton fx:id="printbarcode_Bt" onAction="#printBarcodeButtonClick" styleClass="generalButton" text="Imprimer code-barres" />
+                              <JFXButton onAction="#addFormMovementButtonClick" styleClass="generalButton" text="Ajouter une ligne" />
+                              <JFXButton onAction="#addMovementButtonClick" styleClass="generalButton" text="Ajouter Commande" />
+                           </buttons>
+                        </ButtonBar>
+                     </children>
+                  </HBox>
+                  <ScrollPane maxHeight="212.0" minHeight="212.0" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="vBox" prefWidth="985.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

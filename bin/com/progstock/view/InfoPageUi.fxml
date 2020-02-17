@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="595.0" prefWidth="1020.0" stylesheets="@../../../../resources/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="595.0" prefWidth="1020.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label styleClass="texteInfoBig" text="GestionStock v1.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label styleClass="texteInfoBig" text="Réalisé par : Hermassi Mounir et Sabia Miguel.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <TitledPane alignment="CENTER" animated="false" collapsible="false" maxHeight="180.0" maxWidth="400.0" text="Le programme utilise les bibliothèques suivante" VBox.vgrow="ALWAYS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="180.0" prefWidth="398.0" spacing="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label styleClass="texteInfo" text="MySQL Connector 5.1.44" />
+                              <Label styleClass="texteInfo" text="JFoenix 8.0.1" />
+                              <Label styleClass="texteInfo" text="ZXing 3.3.1" />
+                              <Label styleClass="texteInfo" text="ZXing Java SE Extensions 3.3.1" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </TitledPane>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label styleClass="texteInfo" text="Icon made by" />
+                  <Hyperlink fx:id="hyperlinkAuthorOne" styleClass="liens" text="Freepik" />
+                  <Label styleClass="texteInfo" text="and" />
+                  <Hyperlink fx:id="hyperlinkAuthorTwo" styleClass="liens" text="Chanut" />
+                  <Label styleClass="texteInfo" text="from" />
+                  <Hyperlink fx:id="hyperlinkWebSiteOne" styleClass="liens" text="www.flaticon.com" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label styleClass="texteInfo" text="Font made by" />
+                  <Hyperlink fx:id="hyperlinkAuthorThree" styleClass="liens" text="Jovanny Lemonad" />
+                  <Label styleClass="texteInfo" text="from" />
+                  <Hyperlink fx:id="hyperlinkWebSiteTwo" styleClass="liens" text="www.fontsquirrel.com" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

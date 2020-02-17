@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="595.0" prefWidth="1020.0" stylesheets="@../../../../Resources/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <ComboBox fx:id="familyProduct_Cb" editable="true" minWidth="170.0" onAction="#initCustomListTableView" onShowing="#initComboBoxFamilyProduct" prefWidth="170.0" promptText="Type...">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="product_Cb" editable="true" layoutX="10.0" layoutY="10.0" minWidth="170.0" onAction="#initCustomListTableView" onShowing="#initComboBoxProduct" prefWidth="170.0" promptText="Nom...">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="location_Cb" editable="true" layoutX="10.0" layoutY="10.0" minWidth="170.0" onAction="#initCustomListTableView" onShowing="#initComboBoxLocation" prefWidth="170.0" promptText="Emplacement...">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="refCommande_Cb" editable="true" layoutX="944.0" layoutY="10.0" minWidth="170.0" onAction="#initCustomListTableView" onShowing="#initComboBoxRefCommande" prefWidth="170.0" promptText="Référence...">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="barcode_Cb" editable="true" layoutX="944.0" layoutY="10.0" minWidth="170.0" onAction="#initCustomListTableView" onShowing="#initComboBoxBarcode" prefWidth="170.0" promptText="Code barre...">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+                  <JFXButton minWidth="70.0" onAction="#resetCombo" prefWidth="90.0" styleClass="generalButton" text="Reset">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tableView_Tv" onMouseClicked="#displayItems" prefWidth="1000.0" styleClass="tableView">
+              <columns>
+                <TableColumn fx:id="column" prefWidth="180.0" text="Type Article">
+               
+                            	  <cellValueFactory>
+                	  		<PropertyValueFactory property="familyProduct" />
+	          		  </cellValueFactory>
+	          	</TableColumn>
+                <TableColumn prefWidth="180.0" text="Nom Article">
+                 	<cellValueFactory>
+                 			<PropertyValueFactory property="nameProduct" />
+	          		  </cellValueFactory>
+	          	</TableColumn>
+                <TableColumn minWidth="0.0" prefWidth="180.0" text="Emplacement">
+                 	<cellValueFactory>
+                 			<PropertyValueFactory property="location" />
+	          		  </cellValueFactory>
+	          	</TableColumn>
+                <TableColumn prefWidth="180.0" text="Référence Commande">
+                   <cellValueFactory>
+                   			<PropertyValueFactory property="refCommande" />
+	          		</cellValueFactory>
+	          	</TableColumn>
+                  <TableColumn minWidth="0.0" prefWidth="180.0" text="Code Barre">
+                    <cellValueFactory>
+                   			<PropertyValueFactory property="barcode" />
+	          		</cellValueFactory>
+                  </TableColumn>
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </TableView>
+            <ButtonBar buttonMinWidth="170.0">
+              <buttons>
+                  <JFXButton onAction="#printBarcodeButtonClick" styleClass="generalButton" text="Imprimer code-barres" />
+                  <JFXButton onAction="#scanButton" styleClass="generalButton" text="Scanner article" />
+                  <JFXButton onAction="#deleteButtonClick" styleClass="generalButton" text="Supprimer article" />
+                  <JFXButton minWidth="70.0" onAction="#openDetailsPage" styleClass="generalButton" text="Détails supplémentaires" />
+              </buttons>
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </ButtonBar>
+            <HBox prefHeight="200.0" prefWidth="1100.0" styleClass="greyBox">
+               <children>
+                  <GridPane maxHeight="140.0" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="180.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Nom :">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Type :" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Fournisseur :" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Emplacement :" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="product_Tf" editable="false" GridPane.columnIndex="1" />
+                        <TextField fx:id="productType_Tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="fournisseur_Tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="location_Tf" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Code barre :" GridPane.columnIndex="3">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Etat :" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Référence commande :" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Prix :" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="barcode_Tf" editable="false" GridPane.columnIndex="4" />
+                        <TextField fx:id="etat_Tf" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextField fx:id="reference_Tf" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextField fx:id="prix_Tf" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TextArea fx:id="note_Ta" maxWidth="350.0" wrapText="true" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

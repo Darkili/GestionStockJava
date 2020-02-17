@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane prefHeight="340.0" prefWidth="350.0" stylesheets="@../../../../Resources/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="106.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.0" minWidth="10.0" prefWidth="222.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="*Nom" />
+                  <Label text=" Prenom" GridPane.rowIndex="1" />
+                  <Label text=" Email" GridPane.rowIndex="2" />
+                  <Label text=" Adresse" GridPane.rowIndex="3" />
+                  <Label text=" Tel" GridPane.rowIndex="4" />
+                  <Label text="*User" GridPane.rowIndex="5" />
+                  <Label text="*Mot de passe" GridPane.rowIndex="6" />
+                  <Label text="*Rôle" GridPane.rowIndex="7" />
+                  <TextField fx:id="surname_Tf" GridPane.columnIndex="1" />
+                  <TextField fx:id="name_Tf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="email_Tf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="adresse_Tf" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="tel_Tf" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="user_Tf" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <PasswordField fx:id="password_Tf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <ChoiceBox fx:id="role_Cb" prefHeight="25.0" prefWidth="281.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </GridPane>
+            <Label fx:id="error_Lb" alignment="CENTER" prefHeight="32.0" prefWidth="500.0" styleClass="messageBox" textFill="#ff3406">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </Label>
+            <ButtonBar>
+              <buttons>
+                  <JFXButton fx:id="add_bt" onAction="#validation" styleClass="generalButton" text="Valider" />
+                  <JFXButton fx:id="cancel_bt" onAction="#cancel" styleClass="generalButton" text="Annuler" />
+              </buttons>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>
