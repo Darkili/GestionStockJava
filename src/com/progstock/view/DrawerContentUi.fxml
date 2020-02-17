@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="180.0" styleClass="menuHamburger" stylesheets="@../../../../Resources/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <JFXButton fx:id="inventoriesButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#inventoriesButtonClick" styleClass="menuHamburgerButton" text="Inventaire" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgInventories" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/box-package.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="35.0" top="15.0" />
+               </padding></JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="20.0">
+         <children>
+            <JFXButton fx:id="ordersButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#ordersButtonClick" styleClass="menuHamburgerButton" text="Commandes" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgOrders" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/delivery.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="35.0" top="15.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <JFXButton fx:id="movementButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#movementButtonClick" styleClass="menuHamburgerButton" text="Déplacements" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgMovement" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/delivery-packages.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="35.0" top="15.0" />
+               </padding></JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <JFXButton fx:id="userButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#userButtonClick" styleClass="menuHamburgerButton" text="Utilisateurs" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgUser" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/multiple-users-silhouette.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="35.0" top="15.0" />
+               </padding></JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="130.0">
+         <children>
+            <JFXButton fx:id="preferencesButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#preferencesButtonClick" styleClass="menuHamburgerButton" text="Préférences" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgPreferences" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/settings-gears.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="35.0" top="15.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <JFXButton fx:id="informationButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#informationButtonClick" styleClass="menuHamburgerButton" text="Informations" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgInformation" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/info.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="35.0" top="15.0" />
+               </padding></JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" disable="true" prefHeight="55.0" prefWidth="200.0" visible="false">
+         <children>
+            <JFXButton fx:id="helpButton" onAction="#helpButtonClick" styleClass="menuHamburgerButton" text="Aide">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="imgHelp" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../../../Resources/Images/question-mark.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+         </children>
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <JFXButton fx:id="deconnexionButton" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onAction="#deconnexionButtonClick" styleClass="menuHamburgerButton" text="Déconnexion" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="imgDeconnexion" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                           <image>
+                              <Image url="@../../../../Resources/Images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="15.0" left="35.0" top="15.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

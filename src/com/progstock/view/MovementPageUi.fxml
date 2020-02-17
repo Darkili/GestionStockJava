@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1020.0" stylesheets="@../../../../Resources/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox maxHeight="25.0" maxWidth="1.7976931348623157E308" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ComboBox fx:id="codeBarre_Cb" editable="true" onAction="#initCustomListTableView" onShowing="#initComboBoxCodeBarre" prefWidth="156.0" promptText="Code barre...">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="objet_Cb" editable="true" onAction="#initCustomListTableView" onShowing="#initComboBoxObjet" prefWidth="156.0" promptText="Objet..." />
+                  <ComboBox fx:id="personne_Cb" editable="true" onAction="#initCustomListTableView" onShowing="#initComboBoxPersonne" prefWidth="156.0" promptText="Personne..." />
+                  <ComboBox fx:id="etat_Cb" editable="true" onAction="#initCustomListTableView" onShowing="#initComboBoxEtat" prefWidth="156.0" promptText="Etat..." />
+                  <DatePicker fx:id="date_Cb" onAction="#initCustomListTableView" prefWidth="156.0" />
+                  <JFXButton maxWidth="1.7976931348623157E308" onAction="#resetCombo" prefHeight="25.0" prefWidth="155.0" styleClass="generalButton" text="Reset" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tableView_Tv" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="codeBarreColumn" prefWidth="166.0" text="Code barre">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="codeBarre" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                <TableColumn fx:id="objetColumn" prefWidth="166.0" text="Objet">
+                	<cellValueFactory>
+                 			<PropertyValueFactory property="objet" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                <TableColumn fx:id="personneColumn" prefWidth="166.0" text="Personne">
+                	<cellValueFactory>
+                 			<PropertyValueFactory property="personne" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                  <TableColumn fx:id="etatColumn" prefWidth="166.0" text="Etat">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="etat" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+                  <TableColumn fx:id="dateColumn" prefWidth="166.0" text="Date">
+                  	<cellValueFactory>
+                 			<PropertyValueFactory property="date" />
+	          		  </cellValueFactory>
+          		  </TableColumn>
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="28.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Code barre de l'objet :">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="codeObjet_Tf" prefWidth="150.0" />
+                  <Label text="Code barre de la personne">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="codePersonne_Tf" prefWidth="150.0" />
+                  <JFXButton maxWidth="1.7976931348623157E308" onAction="#addButton" styleClass="generalButton" text="Ajouter" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton maxWidth="1.7976931348623157E308" onAction="#stillNotReturned" prefWidth="100.0" styleClass="generalButton" text="Toujours pas retourné" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
