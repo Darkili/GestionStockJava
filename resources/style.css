@@ -1,0 +1,217 @@
+@font-face {
+	-fx-font-family: 'Cuprum';
+    src: url('Fonts/Cuprum-Regular.ttf');
+}
+
+@font-face {
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: bold;
+    src: url('Fonts/Cuprum-Bold.ttf');
+}
+
+AnchorPane {
+	-fx-background-color: #FFF;
+}
+
+.texteInfo {
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 400;
+	-fx-font-size: 14px;
+}
+
+.texteInfoBig {
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 400;
+	-fx-font-size: 18px;
+}
+
+.liens {
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 400;
+	-fx-font-size: 14px;
+	-fx-text-fill: #0095db;
+	-fx-underline: false;
+}
+
+.liens:focused {
+    -fx-border-color: transparent;
+}
+
+.menuBar {
+	 -fx-background-color: #850652;
+}
+
+.loginHBox {
+	-fx-background-color: #bf1657;
+}
+
+.loginText {
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 400;
+	-fx-font-size: 14px;
+	-fx-background-color: #FFF;
+	-fx-prompt-text-fill: #A8A8A8;
+	-jfx-focus-color: transparent;
+	-jfx-unfocus-color: transparent;
+	-fx-border-color: A8A8A8;
+	-fx-background-radius: 0;
+	-fx-border-width: 1 1 1 0;
+}
+
+.loginBox {
+	-fx-background-color: #bf1657;
+	-fx-background-radius: 0;
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 700;
+	-fx-font-size: 16px;
+}
+
+.jfx-hamburger StackPane {
+	-fx-background-color: white;
+}
+
+.menuBarTitle {
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 700;
+	-fx-font-size: 18px;
+}
+
+.menuHamburger {
+	-fx-background-color: #222222;
+}
+
+.menuHamburgerButton {
+	-fx-text-fill: #AFAFAF;
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 400;
+	-fx-font-size: 16px;
+	-fx-background-radius: 0;
+}
+
+.menuImages {
+	-fx-border-color: #AFAFAF;
+	-fx-border-width: 1 1 1 1;
+	-fx-border-radius: 5;
+}
+
+.generalButton {
+	-fx-background-color: #850652;
+	-fx-background-radius: 0;
+	-fx-font-family: 'Cuprum';
+	-fx-font-weight: 700;
+	-fx-font-size: 14px;
+	-fx-text-fill: #FFF;
+}
+
+.greyBox {
+	-fx-background-color: #F4F4F4;
+}
+
+.whiteBox {
+	-fx-background-color: #FFF;
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #FFF;
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #FFF;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: #75bc1b;
+    -fx-stroke-width: 3pt;
+	-fx-border-color: #850652;
+}
+
+.tab-label {
+    -fx-font-family: 'Cuprum';
+	-fx-font-weight: 400;
+	-fx-font-size: 17px;
+	-fx-text-fill: #222;
+}
+
+.scroll-pane {
+   -fx-background: #FFFFFF;
+}
+
+.titled-pane 
+{
+-fx-text-fill: #FFF;
+}
+
+.titled-pane > .title 
+{
+-fx-body-color: #850652;
+-fx-border-color: #850652;
+-fx-inner-border: #850652;
+-fx-border-radius: 5 5 0 0;
+-fx-background-radius: 5 5 0 0;
+-fx-font-family: 'Cuprum';
+-fx-font-weight: 400;
+-fx-font-size: 16px;
+}
+
+.special-titled-pane > .title 
+{
+-fx-body-color: #850652;
+-fx-border-color: #850652;
+-fx-inner-border: #850652;
+-fx-border-radius: 0 0 0 0;
+-fx-background-radius: 0 0 0 0;
+-fx-font-family: 'Cuprum';
+-fx-font-weight: 400;
+-fx-font-size: 16px;
+}
+
+.titled-pane > *.content 
+{
+	
+}
+
+.combo-box > .arrow-button {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+.combo-box  > .arrow-button{
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 1 1 1 0, 1, 2;
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 1 1 0;
+}
+.combo-box > .list-cell {
+    -fx-background-color:
+    linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+    linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 1 0 1 1;
+    -fx-background-radius: 2 0 0 2;
+}
+.combo-box:contains-focus {
+    -fx-background-color: -fx-focus-color;
+    -fx-background-insets: -0.2;
+    -fx-background-radius: 3;
+}
+.combo-box:focused > .list-cell{
+    -fx-background-color:
+    -fx-control-inner-background,
+    -fx-faint-focus-color,
+    linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 1 0 1 1, 1 0 1 1, 3 2 3 3;
+    -fx-background-radius: 2 0 0 2, 1 0 0 1, 0;
+}
+
+.combo-box :contains-focus > .arrow-button{
+    -fx-background-color: -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
+    -fx-background-insets: 1, 2, 1, 2.6;
+    -fx-background-radius: 0 2 2 0, 0 1 1 0, 0 1 1 0, 0 1 1 0;
+}
+
+.messageBox {
+	-fx-background-color: #DFE0E5;
+	-fx-text-fill: #E2161A;
+}
